@@ -1,9 +1,16 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Category from "./Components/Category";
+import MainPage from "./Components/MainPage";
+import { Container } from "./Components/Styles/Container.styled";
 
 function App() {
-  return <div className="App">hello!!!!!</div>;
+  return (
+    <Container>
+      <Category />
+      <MainPage />
+    </Container>
+  );
 }
 
 export default App;
