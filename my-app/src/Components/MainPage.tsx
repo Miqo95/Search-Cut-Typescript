@@ -1,8 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { StyledMain } from "./Styles/Main.styled";
+import { RootState } from "../Redux/Store";
 
 const MainPage = () => {
   const [featuredCuts, setFeaturedCuts] = useState([] as any[]);
+  // const dispatch = useDispatch();
+  // const countVal = useSelector<RootState, number>(
+  //   (state) => state.countPage.countVal
+  // );
   useEffect(() => {
     fetch(
       `https://api.thecatapi.com/v1/images/search?limit=21&page=1&category_ids=1`
@@ -20,7 +27,13 @@ const MainPage = () => {
         <img src={item.url} alt="" />
       ))}
       <br />
-      <button>Show More ...</button>
+      <button
+        onClick={() => {
+          console.log("countVal");
+        }}
+      >
+        Show More ...
+      </button>
     </StyledMain>
   );
 };
