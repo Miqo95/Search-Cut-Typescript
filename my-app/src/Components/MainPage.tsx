@@ -13,8 +13,6 @@ const MainPage = () => {
   const countImg = countPage.countVal;
 
   const handleImgCountChange = () => {
-    // console.log(countPage);
-    // console.log(catVal);
     dispatch(changeCount({ countVal: countPage.countVal + 10 }));
     if (countPage.countVal > 90) {
       alert("Finish this Category");
