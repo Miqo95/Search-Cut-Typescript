@@ -8,15 +8,19 @@ export const initialState: countPage = {
   countVal: 10,
 };
 
-const categotyValue = createSlice({
-  name: "categotyValue",
+type TPayload = {
+  countVal: number;
+};
+
+const countPageValue = createSlice({
+  name: "countPageValue",
   initialState,
   reducers: {
-    changeValue(state, action) {
-      state.countVal = action.payload.countVal;
+    changeCount(state, { payload }: PayloadAction<TPayload>) {
+      state.countVal = payload.countVal;
     },
   },
 });
 
-export const CatValAction = categotyValue.actions;
-export default categotyValue.reducer;
+export const CauntPageReducer = countPageValue.reducer;
+export const { changeCount } = countPageValue.actions;

@@ -7,6 +7,7 @@ export const StyledCategory = styled.div`
     font-size: 19px;
     font-weight: bold;
   }
+
   select {
     width: 200px;
     height: 50px;
