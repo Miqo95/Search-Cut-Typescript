@@ -1,15 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export interface categoryValue {
-  catVal: string;
-}
-
-const initialState: categoryValue = {
-  catVal: "1",
-};
-
 type TPayload = {
   catVal: string;
+};
+
+const initialState = {
+  catVal: "1",
 };
 
 const categotyValue = createSlice({
@@ -24,4 +20,3 @@ const categotyValue = createSlice({
 
 export const CatValReducer = categotyValue.reducer;
 export const { changeValue } = categotyValue.actions;
-// export default categotyValue.reducer;

@@ -1,15 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export interface countPage {
-  countVal: number;
-}
-
-export const initialState: countPage = {
-  countVal: 10,
-};
-
 type TPayload = {
   countVal: number;
+};
+export const initialState = {
+  countVal: 10,
 };
 
 const countPageValue = createSlice({
