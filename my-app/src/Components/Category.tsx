@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { StyledCategory } from "./Styles/Category.styled";
 import { useDispatch } from "react-redux";
 import { changeValue } from "../Redux/categoryValue";
-import { data } from "./data";
 
 const Category = () => {
   const dispatch = useDispatch();
@@ -21,9 +20,13 @@ const Category = () => {
     <StyledCategory>
       <p>Selected Category</p>
       <select value={selectedType} onChange={handleCategoryChange}>
-        {data.map((item: any) => {
-          return <option value={item.value}>{item.type}</option>;
-        })}
+        <option value="1">Hets</option>
+        <option value="2">Space</option>
+        <option value="3">Funny</option>
+        <option value="4">Sunglasses</option>
+        <option value="5">Boxes</option>
+        <option value="6">Caturday</option>
+        <option value="7">Ties</option>
       </select>
     </StyledCategory>
   );
