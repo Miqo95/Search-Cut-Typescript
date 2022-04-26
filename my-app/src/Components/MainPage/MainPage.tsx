@@ -23,7 +23,7 @@ const MainPage = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.thecatapi.com/v1/images/search?limit=${countImg}&page=1&category_ids=${catVal}`
+      `https://api.thecatapi.com/v1/images/search?limit=${countImg}&page=0&category_ids=${catVal}`
     )
       .then((response) => response.json())
       .then((result) => {
