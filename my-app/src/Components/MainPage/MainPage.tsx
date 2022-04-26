@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeCount } from "../../Redux/countPage";
 import { TStore } from "../../Redux/Store";
 import * as SC from "./assets/styles";
+// import { cutHeats } from "../../json/cutApi";
 
 const MainPage = () => {
   const [featuredCuts, setFeaturedCuts] = useState([] as any[]);
@@ -33,7 +34,7 @@ const MainPage = () => {
   return (
     <SC.StyledMain>
       {featuredCuts.map((item) => (
-        <img src={item.url} alt="" />
+        <img src={item.url} alt="" key={item.id} />
       ))}
       <br />
       <button onClick={handleImgCountChange}>Show More ...</button>
