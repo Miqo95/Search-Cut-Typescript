@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { StyledCategory } from "./Styles/Category.styled";
 import { useDispatch } from "react-redux";
-import { changeValue } from "../Redux/categoryValue";
+import { changeValue } from "../../Redux/categoryValue";
+import * as SC from "./assets/styles";
 
 const Category = () => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const Category = () => {
   };
 
   return (
-    <StyledCategory>
+    <SC.StyledCategory>
       <p>Selected Category</p>
       <select value={selectedType} onChange={handleCategoryChange}>
         <option value="1">Hets</option>
@@ -28,7 +28,7 @@ const Category = () => {
         <option value="6">Caturday</option>
         <option value="7">Ties</option>
       </select>
-    </StyledCategory>
+    </SC.StyledCategory>
   );
 };
 

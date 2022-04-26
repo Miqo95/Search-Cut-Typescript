@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { StyledMain } from "./Styles/Main.styled";
 import { useDispatch, useSelector } from "react-redux";
-import { changeCount } from "../Redux/countPage";
-import { TStore } from "../Redux/Store";
+import { changeCount } from "../../Redux/countPage";
+import { TStore } from "../../Redux/Store";
+import * as SC from "./assets/styles";
 
 const MainPage = () => {
   const [featuredCuts, setFeaturedCuts] = useState([] as any[]);
@@ -31,13 +31,13 @@ const MainPage = () => {
   }, [catVal, countImg]);
 
   return (
-    <StyledMain>
+    <SC.StyledMain>
       {featuredCuts.map((item) => (
         <img src={item.url} alt="" />
       ))}
       <br />
       <button onClick={handleImgCountChange}>Show More ...</button>
-    </StyledMain>
+    </SC.StyledMain>
   );
 };
 
